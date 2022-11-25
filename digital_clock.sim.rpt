@@ -1,0 +1,353 @@
+Simulator report for digital_clock
+Sun Dec 19 10:25:46 2021
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 81 nodes     ;
+; Simulation Coverage         ;       2.06 % ;
+; Total Number of Transitions ; 48           ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C8T144C8  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       2.06 % ;
+; Total nodes checked                                 ; 81           ;
+; Total output ports checked                          ; 97           ;
+; Total output ports with complete 1/0-value coverage ; 2            ;
+; Total output ports with no 1/0-value coverage       ; 95           ;
+; Total output ports with no 1-value coverage         ; 95           ;
+; Total output ports with no 0-value coverage         ; 95           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                    ;
++------------------------------+------------------------------+------------------+
+; Node Name                    ; Output Port Name             ; Output Port Type ;
++------------------------------+------------------------------+------------------+
+; |digital_clock|clock         ; |digital_clock|clock~corein  ; combout          ;
+; |digital_clock|clock~clkctrl ; |digital_clock|clock~clkctrl ; outclk           ;
++------------------------------+------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                                                       ;
++----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                            ; Output Port Name                                                                                                     ; Output Port Type ;
++----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+------------------+
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[1]            ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[1]                       ; regout           ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[1]             ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[1]                        ; regout           ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[3]            ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[3]                       ; regout           ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[3]             ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[3]                        ; regout           ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[2]            ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[2]                       ; regout           ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[2]             ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[2]                        ; regout           ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[0]            ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[0]                       ; regout           ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[0]             ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[0]                        ; regout           ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0              ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0              ; combout          ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0              ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0~COUT         ; cout             ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1              ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1              ; combout          ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1              ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1~COUT         ; cout             ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2              ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2              ; combout          ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2              ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2~COUT         ; cout             ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3              ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3              ; combout          ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3              ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~COUT         ; cout             ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~0            ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~0            ; combout          ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[3]            ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[3]                       ; regout           ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[2]            ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[2]                       ; regout           ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[1]            ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[1]                       ; regout           ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[0]            ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[0]                       ; regout           ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0              ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0              ; combout          ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0              ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0~COUT         ; cout             ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1              ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1              ; combout          ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1              ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1~COUT         ; cout             ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2              ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2              ; combout          ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2              ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2~COUT         ; cout             ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3              ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3              ; combout          ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3              ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~COUT         ; cout             ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~0            ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~0            ; combout          ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0               ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0               ; combout          ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0               ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0~COUT          ; cout             ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1               ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1               ; combout          ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1               ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1~COUT          ; cout             ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2               ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2               ; combout          ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2               ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2~COUT          ; cout             ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3               ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3               ; combout          ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3               ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~COUT          ; cout             ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~0             ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~0             ; combout          ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[3]            ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[3]                       ; regout           ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[2]            ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[2]                       ; regout           ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[1]            ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[1]                       ; regout           ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[0]            ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[0]                       ; regout           ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0              ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0              ; combout          ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0              ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0~COUT         ; cout             ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1              ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1              ; combout          ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1              ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1~COUT         ; cout             ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2              ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2              ; combout          ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2              ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2~COUT         ; cout             ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3              ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3              ; combout          ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3              ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~COUT         ; cout             ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~0            ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~0            ; combout          ;
+; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|counter_reg_bit1a[2]             ; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|current_reg_q_w[2]               ; regout           ;
+; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|counter_reg_bit1a[0]             ; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|current_reg_q_w[0]               ; regout           ;
+; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|counter_reg_bit1a[1]             ; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|current_reg_q_w[1]               ; regout           ;
+; |digital_clock|mux8:inst15|lpm_mux:lpm_mux_component|mux_b3e:auto_generated|result_node[1]~8                         ; |digital_clock|mux8:inst15|lpm_mux:lpm_mux_component|mux_b3e:auto_generated|result_node[1]~8                         ; combout          ;
+; |digital_clock|mux8:inst15|lpm_mux:lpm_mux_component|mux_b3e:auto_generated|result_node[3]~9                         ; |digital_clock|mux8:inst15|lpm_mux:lpm_mux_component|mux_b3e:auto_generated|result_node[3]~9                         ; combout          ;
+; |digital_clock|mux8:inst15|lpm_mux:lpm_mux_component|mux_b3e:auto_generated|result_node[2]~10                        ; |digital_clock|mux8:inst15|lpm_mux:lpm_mux_component|mux_b3e:auto_generated|result_node[2]~10                        ; combout          ;
+; |digital_clock|mux8:inst15|lpm_mux:lpm_mux_component|mux_b3e:auto_generated|result_node[0]~11                        ; |digital_clock|mux8:inst15|lpm_mux:lpm_mux_component|mux_b3e:auto_generated|result_node[0]~11                        ; combout          ;
+; |digital_clock|7447:inst23|81~0                                                                                      ; |digital_clock|7447:inst23|81~0                                                                                      ; combout          ;
+; |digital_clock|7447:inst23|82~0                                                                                      ; |digital_clock|7447:inst23|82~0                                                                                      ; combout          ;
+; |digital_clock|7447:inst23|83                                                                                        ; |digital_clock|7447:inst23|83                                                                                        ; combout          ;
+; |digital_clock|7447:inst23|84~0                                                                                      ; |digital_clock|7447:inst23|84~0                                                                                      ; combout          ;
+; |digital_clock|7447:inst23|85                                                                                        ; |digital_clock|7447:inst23|85                                                                                        ; combout          ;
+; |digital_clock|7447:inst23|86~0                                                                                      ; |digital_clock|7447:inst23|86~0                                                                                      ; combout          ;
+; |digital_clock|7447:inst23|87                                                                                        ; |digital_clock|7447:inst23|87                                                                                        ; combout          ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cmpr_8cc:cmpr2|result_wire[0]~0 ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cmpr_8cc:cmpr2|result_wire[0]~0 ; combout          ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cout_actual                     ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cout_actual                     ; combout          ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cmpr_8cc:cmpr2|result_wire[0]~0 ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cmpr_8cc:cmpr2|result_wire[0]~0 ; combout          ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cout_actual                     ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cout_actual                     ; combout          ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cmpr_8cc:cmpr2|result_wire[0]~0  ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cmpr_8cc:cmpr2|result_wire[0]~0  ; combout          ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cout_actual                      ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cout_actual                      ; combout          ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cmpr_8cc:cmpr2|result_wire[0]~0 ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cmpr_8cc:cmpr2|result_wire[0]~0 ; combout          ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cout_actual                     ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cout_actual                     ; combout          ;
+; |digital_clock|inst11~0                                                                                              ; |digital_clock|inst11~0                                                                                              ; combout          ;
+; |digital_clock|inst11                                                                                                ; |digital_clock|inst11                                                                                                ; combout          ;
+; |digital_clock|inst9                                                                                                 ; |digital_clock|inst9                                                                                                 ; combout          ;
+; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|trigger_mux_w[2]~6               ; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|trigger_mux_w[2]~6               ; combout          ;
+; |digital_clock|inst10                                                                                                ; |digital_clock|inst10                                                                                                ; combout          ;
+; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|trigger_mux_w[1]~1               ; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|trigger_mux_w[1]~1               ; combout          ;
+; |digital_clock|~GND                                                                                                  ; |digital_clock|~GND                                                                                                  ; combout          ;
+; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|current_reg_q_w[0]~_wirecell     ; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|current_reg_q_w[0]~_wirecell     ; combout          ;
+; |digital_clock|A                                                                                                     ; |digital_clock|A                                                                                                     ; padio            ;
+; |digital_clock|B                                                                                                     ; |digital_clock|B                                                                                                     ; padio            ;
+; |digital_clock|C                                                                                                     ; |digital_clock|C                                                                                                     ; padio            ;
+; |digital_clock|D                                                                                                     ; |digital_clock|D                                                                                                     ; padio            ;
+; |digital_clock|E                                                                                                     ; |digital_clock|E                                                                                                     ; padio            ;
+; |digital_clock|F                                                                                                     ; |digital_clock|F                                                                                                     ; padio            ;
+; |digital_clock|G                                                                                                     ; |digital_clock|G                                                                                                     ; padio            ;
+; |digital_clock|k1                                                                                                    ; |digital_clock|k1                                                                                                    ; padio            ;
+; |digital_clock|k2                                                                                                    ; |digital_clock|k2                                                                                                    ; padio            ;
+; |digital_clock|k3                                                                                                    ; |digital_clock|k3                                                                                                    ; padio            ;
+; |digital_clock|k4                                                                                                    ; |digital_clock|k4                                                                                                    ; padio            ;
+; |digital_clock|key1                                                                                                  ; |digital_clock|key1~corein                                                                                           ; combout          ;
+; |digital_clock|En                                                                                                    ; |digital_clock|En~corein                                                                                             ; combout          ;
++----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                                                       ;
++----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                            ; Output Port Name                                                                                                     ; Output Port Type ;
++----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+------------------+
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[1]            ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[1]                       ; regout           ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[1]             ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[1]                        ; regout           ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[3]            ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[3]                       ; regout           ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[3]             ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[3]                        ; regout           ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[2]            ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[2]                       ; regout           ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[2]             ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[2]                        ; regout           ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[0]            ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[0]                       ; regout           ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[0]             ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[0]                        ; regout           ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0              ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0              ; combout          ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0              ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0~COUT         ; cout             ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1              ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1              ; combout          ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1              ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1~COUT         ; cout             ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2              ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2              ; combout          ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2              ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2~COUT         ; cout             ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3              ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3              ; combout          ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3              ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~COUT         ; cout             ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~0            ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~0            ; combout          ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[3]            ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[3]                       ; regout           ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[2]            ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[2]                       ; regout           ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[1]            ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[1]                       ; regout           ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[0]            ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[0]                       ; regout           ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0              ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0              ; combout          ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0              ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0~COUT         ; cout             ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1              ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1              ; combout          ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1              ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1~COUT         ; cout             ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2              ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2              ; combout          ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2              ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2~COUT         ; cout             ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3              ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3              ; combout          ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3              ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~COUT         ; cout             ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~0            ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~0            ; combout          ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0               ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0               ; combout          ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0               ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0~COUT          ; cout             ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1               ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1               ; combout          ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1               ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1~COUT          ; cout             ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2               ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2               ; combout          ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2               ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2~COUT          ; cout             ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3               ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3               ; combout          ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3               ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~COUT          ; cout             ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~0             ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~0             ; combout          ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[3]            ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[3]                       ; regout           ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[2]            ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[2]                       ; regout           ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[1]            ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[1]                       ; regout           ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_reg_bit1a[0]            ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|safe_q[0]                       ; regout           ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0              ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0              ; combout          ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0              ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita0~COUT         ; cout             ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1              ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1              ; combout          ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1              ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita1~COUT         ; cout             ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2              ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2              ; combout          ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2              ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita2~COUT         ; cout             ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3              ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3              ; combout          ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3              ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~COUT         ; cout             ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~0            ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|counter_comb_bita3~0            ; combout          ;
+; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|counter_reg_bit1a[2]             ; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|current_reg_q_w[2]               ; regout           ;
+; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|counter_reg_bit1a[0]             ; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|current_reg_q_w[0]               ; regout           ;
+; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|counter_reg_bit1a[1]             ; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|current_reg_q_w[1]               ; regout           ;
+; |digital_clock|mux8:inst15|lpm_mux:lpm_mux_component|mux_b3e:auto_generated|result_node[1]~8                         ; |digital_clock|mux8:inst15|lpm_mux:lpm_mux_component|mux_b3e:auto_generated|result_node[1]~8                         ; combout          ;
+; |digital_clock|mux8:inst15|lpm_mux:lpm_mux_component|mux_b3e:auto_generated|result_node[3]~9                         ; |digital_clock|mux8:inst15|lpm_mux:lpm_mux_component|mux_b3e:auto_generated|result_node[3]~9                         ; combout          ;
+; |digital_clock|mux8:inst15|lpm_mux:lpm_mux_component|mux_b3e:auto_generated|result_node[2]~10                        ; |digital_clock|mux8:inst15|lpm_mux:lpm_mux_component|mux_b3e:auto_generated|result_node[2]~10                        ; combout          ;
+; |digital_clock|mux8:inst15|lpm_mux:lpm_mux_component|mux_b3e:auto_generated|result_node[0]~11                        ; |digital_clock|mux8:inst15|lpm_mux:lpm_mux_component|mux_b3e:auto_generated|result_node[0]~11                        ; combout          ;
+; |digital_clock|7447:inst23|81~0                                                                                      ; |digital_clock|7447:inst23|81~0                                                                                      ; combout          ;
+; |digital_clock|7447:inst23|82~0                                                                                      ; |digital_clock|7447:inst23|82~0                                                                                      ; combout          ;
+; |digital_clock|7447:inst23|83                                                                                        ; |digital_clock|7447:inst23|83                                                                                        ; combout          ;
+; |digital_clock|7447:inst23|84~0                                                                                      ; |digital_clock|7447:inst23|84~0                                                                                      ; combout          ;
+; |digital_clock|7447:inst23|85                                                                                        ; |digital_clock|7447:inst23|85                                                                                        ; combout          ;
+; |digital_clock|7447:inst23|86~0                                                                                      ; |digital_clock|7447:inst23|86~0                                                                                      ; combout          ;
+; |digital_clock|7447:inst23|87                                                                                        ; |digital_clock|7447:inst23|87                                                                                        ; combout          ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cmpr_8cc:cmpr2|result_wire[0]~0 ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cmpr_8cc:cmpr2|result_wire[0]~0 ; combout          ;
+; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cout_actual                     ; |digital_clock|cnt10:inst3|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cout_actual                     ; combout          ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cmpr_8cc:cmpr2|result_wire[0]~0 ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cmpr_8cc:cmpr2|result_wire[0]~0 ; combout          ;
+; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cout_actual                     ; |digital_clock|cnt10:inst2|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cout_actual                     ; combout          ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cmpr_8cc:cmpr2|result_wire[0]~0  ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cmpr_8cc:cmpr2|result_wire[0]~0  ; combout          ;
+; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cout_actual                      ; |digital_clock|cnt10:inst|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cout_actual                      ; combout          ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cmpr_8cc:cmpr2|result_wire[0]~0 ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cmpr_8cc:cmpr2|result_wire[0]~0 ; combout          ;
+; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cout_actual                     ; |digital_clock|cnt10:inst1|lpm_counter:lpm_counter_component|cntr_e3k:auto_generated|cout_actual                     ; combout          ;
+; |digital_clock|inst11~0                                                                                              ; |digital_clock|inst11~0                                                                                              ; combout          ;
+; |digital_clock|inst11                                                                                                ; |digital_clock|inst11                                                                                                ; combout          ;
+; |digital_clock|inst9                                                                                                 ; |digital_clock|inst9                                                                                                 ; combout          ;
+; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|trigger_mux_w[2]~6               ; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|trigger_mux_w[2]~6               ; combout          ;
+; |digital_clock|inst10                                                                                                ; |digital_clock|inst10                                                                                                ; combout          ;
+; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|trigger_mux_w[1]~1               ; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|trigger_mux_w[1]~1               ; combout          ;
+; |digital_clock|~GND                                                                                                  ; |digital_clock|~GND                                                                                                  ; combout          ;
+; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|current_reg_q_w[0]~_wirecell     ; |digital_clock|cnt6:inst4|lpm_counter:lpm_counter_component|cntr_22k:auto_generated|current_reg_q_w[0]~_wirecell     ; combout          ;
+; |digital_clock|A                                                                                                     ; |digital_clock|A                                                                                                     ; padio            ;
+; |digital_clock|B                                                                                                     ; |digital_clock|B                                                                                                     ; padio            ;
+; |digital_clock|C                                                                                                     ; |digital_clock|C                                                                                                     ; padio            ;
+; |digital_clock|D                                                                                                     ; |digital_clock|D                                                                                                     ; padio            ;
+; |digital_clock|E                                                                                                     ; |digital_clock|E                                                                                                     ; padio            ;
+; |digital_clock|F                                                                                                     ; |digital_clock|F                                                                                                     ; padio            ;
+; |digital_clock|G                                                                                                     ; |digital_clock|G                                                                                                     ; padio            ;
+; |digital_clock|k1                                                                                                    ; |digital_clock|k1                                                                                                    ; padio            ;
+; |digital_clock|k2                                                                                                    ; |digital_clock|k2                                                                                                    ; padio            ;
+; |digital_clock|k3                                                                                                    ; |digital_clock|k3                                                                                                    ; padio            ;
+; |digital_clock|k4                                                                                                    ; |digital_clock|k4                                                                                                    ; padio            ;
+; |digital_clock|key1                                                                                                  ; |digital_clock|key1~corein                                                                                           ; combout          ;
+; |digital_clock|En                                                                                                    ; |digital_clock|En~corein                                                                                             ; combout          ;
++----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
+    Info: Processing started: Sun Dec 19 10:25:46 2021
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off digital_clock -c digital_clock
+Info: Using vector source file "D:/Project/Quartus/digital_clock/digital_clock.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       2.06 %
+Info: Number of transitions in simulation is 48
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 155 megabytes
+    Info: Processing ended: Sun Dec 19 10:25:46 2021
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,551 @@
+--lpm_counter CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DEVICE_FAMILY="Cyclone II" lpm_direction="UP" lpm_port_updown="PORT_UNUSED" lpm_width=96 clock q CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48
+--VERSION_BEGIN 9.0 cbx_cycloneii 2008:05:19:10:57:37:SJ cbx_lpm_add_sub 2008:12:09:22:11:50:SJ cbx_lpm_compare 2009:02:03:01:43:16:SJ cbx_lpm_counter 2008:05:19:10:42:20:SJ cbx_lpm_decode 2008:05:19:10:39:27:SJ cbx_mgl 2009:01:29:16:12:07:SJ cbx_stratix 2008:09:18:16:08:35:SJ cbx_stratixii 2008:11:14:16:08:42:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2009 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION cycloneii_lcell_comb (cin, dataa, datab, datac, datad)
+WITH ( LUT_MASK, SUM_LUTC_INPUT)
+RETURNS ( combout, cout);
+FUNCTION cycloneii_lcell_ff (aclr, clk, datain, ena, sclr, sdata, sload)
+WITH ( x_on_violation)
+RETURNS ( regout);
+
+--synthesis_resources = lut 96 reg 96 
+SUBDESIGN cntr_jmh
+( 
+	clock	:	input;
+	q[95..0]	:	output;
+) 
+VARIABLE 
+	counter_comb_bita0 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita1 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita2 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita3 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita4 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita5 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita6 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita7 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita8 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita9 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita10 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita11 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita12 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita13 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita14 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita15 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita16 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita17 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita18 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita19 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita20 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita21 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita22 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita23 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita24 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita25 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita26 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita27 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita28 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita29 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita30 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita31 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita32 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita33 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita34 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita35 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita36 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita37 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita38 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita39 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita40 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita41 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita42 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita43 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita44 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita45 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita46 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita47 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita48 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita49 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita50 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita51 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita52 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita53 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita54 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita55 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita56 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita57 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita58 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita59 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita60 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita61 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita62 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita63 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita64 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita65 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita66 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita67 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita68 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita69 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita70 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita71 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita72 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita73 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita74 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita75 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita76 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita77 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita78 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita79 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita80 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita81 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita82 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita83 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita84 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita85 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita86 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita87 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita88 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita89 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita90 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita91 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita92 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita93 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita94 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita95 : cycloneii_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_reg_bit1a[95..0] : cycloneii_lcell_ff;
+	aclr_actual	: WIRE;
+	clk_en	: NODE;
+	cnt_en	: NODE;
+	data[95..0]	: NODE;
+	external_cin	: WIRE;
+	s_val[95..0]	: WIRE;
+	safe_q[95..0]	: WIRE;
+	sclr	: NODE;
+	sload	: NODE;
+	sset	: NODE;
+	updown_dir	: WIRE;
+
+BEGIN 
+	counter_comb_bita[95..0].cin = ( counter_comb_bita[94..0].cout, external_cin);
+	counter_comb_bita[95..0].dataa = ( counter_reg_bit1a[95..0].regout);
+	counter_comb_bita[95..0].datab = ( updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir);
+	counter_comb_bita[95..0].datad = ( B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1");
+	counter_reg_bit1a[].aclr = aclr_actual;
+	counter_reg_bit1a[].clk = clock;
+	counter_reg_bit1a[].datain = ( counter_comb_bita[95..0].combout);
+	counter_reg_bit1a[].ena = (clk_en & (((sclr # sset) # sload) # cnt_en));
+	counter_reg_bit1a[].sdata = ((! sclr) & ((sset & s_val[]) # ((! sset) & data[])));
+	counter_reg_bit1a[].sload = ((sclr # sset) # sload);
+	aclr_actual = B"0";
+	clk_en = VCC;
+	cnt_en = VCC;
+	data[] = GND;
+	external_cin = B"1";
+	q[] = safe_q[];
+	s_val[] = B"111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111";
+	safe_q[] = counter_reg_bit1a[].regout;
+	sclr = GND;
+	sload = GND;
+	sset = GND;
+	updown_dir = B"1";
+END;
+--VALID FILE
